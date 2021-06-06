@@ -1,11 +1,10 @@
-// somar numeros primos até 1000
+const numbers = Array.from({ length: 500}, (j, k) => 1 + (k * 2));
+const sum = numbers.reduce((acc, currentValue) => {
+  if ((currentValue !== 3 && currentValue !== 5) && (currentValue % 3 === 0 || currentValue % 5 === 0)) {
+    return acc;
+  }
+  
+  return acc + currentValue;
+}, 0);
 
-console.time('conta');
-for (let i = 0; i < 1000; i++) {
-  console.log(i);
-}
-console.timeEnd('conta');
-
-console.time('conta2');
-new Array(1000).fill(null).map((v, i) => console.log(i));
-console.timeEnd('conta2');
+return sum;
