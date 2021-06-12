@@ -58,23 +58,23 @@ const balanced = (s) => {
 }
 
 const obj = {
-  'aaabc**': true,
-  'aaabc***': false,
-  'aaabc*********': true,
-  'aabcd***': true,
+  'aaabc****': true,
+  'aaabc*****': false,
+  'aaabc*************************': true,
+  'aabcd*******': true,
   'a': true,
   'ab': true,
   '*': true,
   'aabb**': true,
   '*aaaaaaa': true,
   'abcdefghijklmnopqrstuvxwyzABCDEFGHIJKLMNOPQRSTUVXWYZ': true,
-  'abcdefghijklmnopqrstuvxwyzABCDEFGHIJKLMNOPQRSTUVXWYZ******************': true,
+  'abcdefghijklmnopqrstuvxwyzABCDEFGHIJKLMNOPQRSTUVXWYZ****************************************************': true,
   'abcdefghijklmnopqrstuvxwyzABCDEFGHIJKLMNOPQRSTUVXWYZ*': false,
-  'abcdefghijklmnopqrstuvxwyzABCDEFGHIJKLMNOPQRSTUVXWYZ**': false,
-  'abcdefghijklmnopqrstuvxwyz******************': true,
+  'abcdefghijklmnopqrstuvxwyzABCDEFGHIJKLMNOPQRSTUVXWYZ****': false,
+  'abcdefghijklmnopqrstuvxwyz****************************************************': true,
   'AA*BB*CC*DD*EE**': true,
   'AA*BB*CC*DD*EE***': false,
-  'abcdefghijklmnopqrstuvxwyzABCDEFGHIJKLMNOPQRSTUVXWabcdefghijklmnopqrstuvxwyzABCDEFGHIJKLMNOPQRSTUVX***': true,
+  'abcdefghijklmnopqrstuvxwyzABCDEFGHIJKLMNOPQRSTUVXWabcdefghijklmnopqrstuvxwyzABCDEFGHIJKLMNOPQRSTUVX*****': true,
 }
 
 Object.keys(obj).map(value => {
@@ -87,3 +87,7 @@ Object.keys(obj).map(value => {
   }
   console.timeEnd(value);
 });
+
+// a*aabc*******
+
+// a*aabc****
